@@ -1,0 +1,15 @@
+body {
+    background-color: #001;
+}
+
+
+#h2-logo {
+    color: #e44232;
+}
+
+#btn-login {
+    color: #fff;
+    font-weight: bold;
+    background-color: #e44232;
+    width: 100%;
+}

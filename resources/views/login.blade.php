@@ -22,7 +22,7 @@
                 <h2>Login</h2>
             </div>
             <div class="mt-5" style="width: 30%">
-                <form>
+                <form accept="{{ route('loginSubmit') }}" method="GET">
                 <div class="mb-3">
                     <label for="inputEmail" class="form-label">Email</label>
                     <input type="email" class="form-control" id="inputEmail">

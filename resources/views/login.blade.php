@@ -22,18 +22,25 @@
                 <h2>Login</h2>
             </div>
             <div class="mt-5" style="width: 30%">
-                <form accept="{{ route('loginSubmit') }}" method="GET">
-                <div class="mb-3">
-                    <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail">
+                <form action="{{ route('loginSubmit') }}" method="GET">
+                    @csrf
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="inputPassword" name="password">
+                    </div>
+                    <button type="submit" class="btn" id="btn-login">Login</button>
+                </form>
+                <div class="mt-1">
+                    @if (session('loginError'))
+                        <div class="alert alert-danger text-center">
+                            {{ session('loginError') }}
+                        </div>
+                    @endif
                 </div>
-                <div class="mb-3">
-                    <label for="inputPassword" class="form-label">Password</label>
-                    <input type="password" class="form-control" id="inputPassword">
-                </div>
-
-                <button type="submit" class="btn" id="btn-login">Login</button>
-            </form>
             </div>
         </div>
     </div>
